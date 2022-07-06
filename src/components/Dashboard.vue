@@ -5,7 +5,7 @@
                 all board
             </div>
             <router-link
-                active-class="bg-purple-700 text-white rounded-md" :to="{
+                active-class="bg-indigo-700 text-white rounded-md" :to="{
                     name: 'kanban',
                     params: {
                         id: tab.id
@@ -30,7 +30,7 @@ export interface Tab {
 
 const tabs = ref<Tab[]>([
     {
-        name: 'Perform Lauch',
+        name: 'Perform Launch',
         id: 1
     },
     {
@@ -38,10 +38,6 @@ const tabs = ref<Tab[]>([
         id: 2
     }
 ]);
-const selected =  ref(tabs.value[0].id);
-function selectTab(tab: Tab) {
-    selected.value = tab.id
-}
 </script>
 
 <style>
