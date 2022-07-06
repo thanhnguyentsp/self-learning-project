@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full bg-slate-800">
+    <div class="h-full bg-slate-800 p-2">
     Kanban
 
     </div>

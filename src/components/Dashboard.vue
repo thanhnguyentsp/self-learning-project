@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-row h-full w-100 bg-slate-700">
-        <div class="flex-none w-64 overflow-y-auto overflow-x-hidden text-left p-4">
+        <div class="flex-none w-64 overflow-y-auto overflow-x-hidden text-left p-4 border-r-2 border-r-slate-600">
             <div class="text-sm uppercase text-gray-400 p-3 font-semibold">
                 all board
             </div>
