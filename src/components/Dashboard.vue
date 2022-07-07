@@ -8,12 +8,13 @@
                 active-class="bg-indigo-700 text-white rounded-md" :to="{
                     name: 'kanban',
                     params: {
-                        id: tab.id
+                        id: group.id
                     }
-                }"  v-for="tab in tabs" :key="tab.id"
+                }"  v-for="group in groups" :key="group.id"
                 class="text-gray-400 capitalize p-3 text-sm font-semibold hover:cursor-pointer block">
-                 {{ tab.name }}
+                 {{ group.name }}
             </router-link>
+            <button @click="store.commit('addGroup')" class="bg-indigo-600 rounded-full text-white w-full p-2 mt-3 hover:bg-indigo-800 text-sm font-semibold">+ Add New Group</button>
         </div>
         <div class="flex-auto">
             <router-view></router-view>
@@ -23,21 +24,15 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { computed } from 'vue'
+
+import { useStore } from 'vuex';
 export interface Tab {
     name: string;
     id: number;
 }
-
-const tabs = ref<Tab[]>([
-    {
-        name: 'Perform Launch',
-        id: 1
-    },
-    {
-        name: 'Marketing Place',
-        id: 2
-    }
-]);
+const store = useStore();
+const groups = computed(() => store.state.groups);
 </script>
 
 <style>
