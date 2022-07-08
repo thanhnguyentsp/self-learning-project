@@ -5,6 +5,9 @@ import Dashboard from "./components/Dashboard.vue";
 import KanbanBoard from "./components/KanbanBoard.vue";
 import './index.css'
 import { createStore } from "vuex";
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
+import { openDialog } from 'vue3-promise-dialog';
 
 // 3. Create the router instance and pass the `routes` option
 // You can pass in additional options here, but let's
@@ -42,6 +45,8 @@ export interface KanbanTask {
   id: number;
   name: string;
   groupId: number;
+  subTaskIds?: number[]; 
+  done?: boolean;
 }
 
 export interface State {
@@ -49,7 +54,6 @@ export interface State {
   tickets: KanbanTiket[],
   tasks: KanbanTask[],
 }
-
 export const store = createStore<State>({
   state() {
     return {
@@ -63,7 +67,7 @@ export const store = createStore<State>({
       state.groups =  [
         ...state.groups,
         {
-          name: `New Group ${new Date().getTime()}`,
+          name: `New Board ${new Date().getTime()}`,
           id: new Date().getTime()
         }
       ]
