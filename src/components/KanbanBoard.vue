@@ -9,21 +9,22 @@
             </div>
         </div>
         <div class="flex flex-nowrap overflow-x-auto flex-auto">
-            <tasks-col :tasks="item.tasks" @changeTask="store.commit('editTask', $event)" @setTask="store.commit('addTask', item.id)" @setName="store.commit('editTicket', {
+            <tasks-col @selectTask="selectedTask = $event" :tasks="item.tasks" @changeTask="store.commit('editTask', $event)" @setTask="store.commit('addTask', item.id)" @setName="store.commit('editTicket', {
                 ...item,
                 name: $event
             })" :key="item.id" v-for="item in tickets" :name="item.name"  class="w-64 ml-6" color="text-blue-500"></tasks-col>
             <button @click="store.commit('addTicket', group?.id)" class="border-dashed w-64 m-2 mt-6 rounded-lg border-slate-700 h-full border-4 flex justify-center items-center text-9xl text-slate-700 hover:border-slate-900 hover:text-slate-900">+</button>
         </div>
     </div>
+    <task-dialog @close="selectedTask = null" :groupTask="tickets" :task="selectedTask"></task-dialog>
 
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { useStore } from 'vuex';
-import { State,  } from '../main';
+import { KanbanTask, State,  } from '../main';
 
 import TasksCol from './TasksCol.vue';
 import TaskDialog from './TaskDialog.vue';
@@ -37,6 +38,7 @@ const tickets = computed(() => store.state.tickets.filter(ticket => ticket.group
     ...ticket,
     tasks: store.state.tasks.filter(task => task.groupId === ticket.id)
 })));
+const selectedTask = ref<KanbanTask>(null);
 
 </script>
 

@@ -44,9 +44,12 @@ export interface KanbanTiket {
 export interface KanbanTask {
   id: number;
   name: string;
+  description: string;
   groupId: number;
-  subTaskIds?: number[]; 
-  done?: boolean;
+  subTasks: {
+    name: string;
+    checked: boolean;
+  }[]; 
 }
 
 export interface State {
@@ -110,7 +113,8 @@ export const store = createStore<State>({
         {
           name: `New Task ${new Date().getTime()}`,
           id: new Date().getTime(),
-          groupId
+          groupId,
+          subTasks: []
         }
       ];
     },
