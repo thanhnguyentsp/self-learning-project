@@ -14,6 +14,7 @@
     "vue-js-modal": "^2.0.1",
     "vue-router": "4",
     "vue3-promise-dialog": "^0.3.4",
+    "vuedraggable": "^4.1.0",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
