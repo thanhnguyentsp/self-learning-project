@@ -8,11 +8,16 @@ import { faHatWizard } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { createRouter, createWebHistory } from 'vue-router';
 import Dashboard from './views/Dashboard.vue'
+import Landing from './views/Landing.vue'
 
 const routes = [
     {
       path: "/admin/dashboard",
       component: Dashboard,
+    },
+    {
+      path: "/admin/landing",
+      component: Landing,
     }
   ];
   

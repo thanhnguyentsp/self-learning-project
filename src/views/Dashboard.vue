@@ -1,7 +1,7 @@
 <template>
   <div>
     <sidebar-component></sidebar-component>
-    <div class="relative md:ml-64 bg-blueGray-100">
+    <div class="relative md:ml-64 bg-gray-100">
       <navbar-component></navbar-component>
       <!-- Header -->
       <div class="relative bg-pink-600 md:pt-32 pb-32 pt-12">
@@ -130,10 +130,10 @@
         </div>
       </div>
       <div class="px-4 md:px-10 mx-auto w-full -m-24">
-        <!-- <div class="flex flex-wrap">
+        <div class="flex flex-wrap">
           <line-chart-component></line-chart-component>
           <bar-chart-component></bar-chart-component>
-        </div> -->
+        </div>
         <div class="flex flex-wrap mt-4">
           <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
@@ -160,16 +160,16 @@
                 <table class="items-center w-full bg-transparent border-collapse">
                   <thead>
                     <tr>
-                      <th class="px-6 bg-blueGray-50 text-blue-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                      <th class="px-6 bg-gray-50 text-blue-500 align-middle border border-solid border-gray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                         Page name
                       </th>
-                      <th class="px-6 bg-blueGray-50 text-blue-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                      <th class="px-6 bg-gray-50 text-blue-500 align-middle border border-solid border-gray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                         Visitors
                       </th>
-                      <th class="px-6 bg-blueGray-50 text-blue-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                      <th class="px-6 bg-gray-50 text-blue-500 align-middle border border-solid border-gray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                         Unique users
                       </th>
-                      <th class="px-6 bg-blueGray-50 text-blue-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                      <th class="px-6 bg-gray-50 text-blue-500 align-middle border border-solid border-gray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                         Bounce rate
                       </th>
                     </tr>
@@ -280,14 +280,14 @@
                 <table class="items-center w-full bg-transparent border-collapse">
                   <thead class="thead-light">
                     <tr>
-                      <th class="px-6 bg-blueGray-50 text-blue-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                      <th class="px-6 bg-gray-50 text-blue-500 align-middle border border-solid border-gray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                         Referral
                       </th>
-                      <th class="px-6 bg-blueGray-50 text-blue-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                      <th class="px-6 bg-gray-50 text-blue-500 align-middle border border-solid border-gray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                         Visitors
                       </th>
                       <th
-                        class="px-6 bg-blueGray-50 text-blue-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                        class="px-6 bg-gray-50 text-blue-500 align-middle border border-solid border-gray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
                         style="min-width:140px"
                       ></th>
                     </tr>

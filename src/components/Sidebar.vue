@@ -36,7 +36,7 @@
       >
         <!-- Collapse header -->
         <div
-          class="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200"
+          class="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-gray-200"
         >
           <div class="flex flex-wrap">
             <div class="w-6/12">
@@ -64,7 +64,7 @@
             <input
               type="text"
               placeholder="Search"
-              class="border-0 px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300 text-blue-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
+              class="border-0 px-3 py-2 h-12 border border-solid  border-gray-500 placeholder-gray-300 text-blue-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
             />
           </div>
         </form>
